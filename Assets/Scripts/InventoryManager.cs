@@ -4,13 +4,14 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    [Header("Envanter Slotları (UI Image veya RectTransform içeren objeler)")]
+    [Header("Envanter Slotları (UI Image / RectTransform)")]
     public Image[] slotKutulari = new Image[6];
 
-    [Header("Envantere Eklenecek Prefablar (üstünde ItemBilgi olmalı)")]
+    [Header("Item Prefabları (üstünde ItemBilgi olmalı)")]
     public List<GameObject> itemPrefabs = new List<GameObject>();
 
-    private bool[] slotDolumu;
+    // Her slotun tuttuğu ItemID (-1 = boş)
+    private int[] slotItemIDs;
 
     public static InventoryManager AnaYonetici;
 
@@ -21,12 +22,13 @@ public class InventoryManager : MonoBehaviour
         if (slotKutulari == null || slotKutulari.Length == 0)
             Debug.LogError("[InventoryManager] slotKutulari boş!", this);
 
-        slotDolumu = new bool[slotKutulari.Length];
+        slotItemIDs = new int[slotKutulari.Length];
+        for (int i = 0; i < slotItemIDs.Length; i++) slotItemIDs[i] = -1;
     }
 
     /// <summary>
     /// Pickup'tan gelen ItemBilgi’ye göre, ID’si eşleşen prefabı
-    /// ilk boş slota instantiate eder.
+    /// ilk boş slota instantiate eder ve slotun currentItemID’sini set eder.
     /// </summary>
     public void EsyaEkle(ItemBilgi picked)
     {
@@ -36,11 +38,11 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        // 1) İlk boş slotu bul
+        // 1) İlk boş slotu bul (ID -1 olan)
         int targetIndex = -1;
-        for (int i = 0; i < slotDolumu.Length; i++)
+        for (int i = 0; i < slotItemIDs.Length; i++)
         {
-            if (!slotDolumu[i])
+            if (slotItemIDs[i] == -1)
             {
                 targetIndex = i;
                 break;
@@ -76,33 +78,48 @@ public class InventoryManager : MonoBehaviour
             rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
             rt.pivot = new Vector2(0.5f, 0.5f);
             rt.anchoredPosition = Vector2.zero;
-
-            // 🔹 SCALE BURADA AYARLANIYOR
             rt.localScale = new Vector3(75f, 75f, 1f);
-
-            // UI'de Z'yi sıfırla
             var lp = rt.localPosition;
             rt.localPosition = new Vector3(lp.x, lp.y, 0f);
         }
         else
         {
-            // UI değilse world position eşitle
             spawned.transform.position = slotTransform.position;
-
-            // 🔹 WORLD SPACE NESNELER İÇİN DE SCALE 75x75
             spawned.transform.localScale = new Vector3(75f, 75f, 1f);
         }
 
-        // 4) Slotu dolu işaretle
-        slotDolumu[targetIndex] = true;
+        // 4) Slot scriptine yaz: currentItem + currentItemID
+        var slotScript = slotTransform.GetComponent<EnvanterSlots>();
+        var spawnedInfo = spawned.GetComponent<ItemBilgi>();
 
-        if (slotKutulari[targetIndex] != null)
+        if (slotScript != null)
         {
-            slotKutulari[targetIndex].enabled = true;
+            slotScript.currentItem   = spawnedInfo;
+            slotScript.currentItemID = spawnedInfo != null ? spawnedInfo.ItemID : picked.ItemID;
         }
 
-        // Log
-        var info = spawned.GetComponent<ItemBilgi>();
-        Debug.Log($"[InventoryManager] Eklendi: {(info ? info.ItemName : $"ID:{picked.ItemID}")} → Slot {targetIndex}");
+        // 5) Manager tarafında da ID’yi sakla
+        slotItemIDs[targetIndex] = picked.ItemID;
+
+        // (İsteğe bağlı) slot görselini aç
+        if (slotKutulari[targetIndex] != null)
+            slotKutulari[targetIndex].enabled = true;
+
+        Debug.Log($"[InventoryManager] Eklendi: {(spawnedInfo ? spawnedInfo.ItemName : $"ID:{picked.ItemID}")} → Slot {targetIndex}");
+    }
+
+    // İstersen dışarıdan bir slotu boşaltmak için:
+    public void ClearSlot(int index)
+    {
+        if (index < 0 || index >= slotKutulari.Length) return;
+
+        var t = slotKutulari[index].transform;
+        for (int i = t.childCount - 1; i >= 0; i--)
+            Destroy(t.GetChild(i).gameObject);
+
+        var slotScript = t.GetComponent<EnvanterSlots>();
+        if (slotScript) slotScript.ClearSlot();
+
+        slotItemIDs[index] = -1;
     }
 }

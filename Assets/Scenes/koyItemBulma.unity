@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  currentItemID: -1
 --- !u!1 &206230703
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  currentItemID: -1
 --- !u!1 &296317307
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  currentItemID: -1
 --- !u!1 &656086181
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  currentItemID: -1
 --- !u!1 &724716258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  currentItemID: -1
 --- !u!1 &1416560250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  currentItemID: -1
 --- !u!1 &1426089958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,8 +1677,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -8585849322605710481, guid: fcfb94583ec238b49a1d12dcedf680ac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1692,8 +1698,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.96, y: 0, z: 0}
-  m_LocalScale: {x: 2.5860145, y: 2.1843803, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 206230706}
   m_Father: {fileID: 0}
@@ -1736,7 +1742,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 9.92, y: 9.92}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1861,6 +1867,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ab7bcd22f1c924aa0b3a3e6ce7cfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoot: {fileID: 0}
+  includeSelf: 1
+  includeInactive: 1
 --- !u!1 &2124177613
 GameObject:
   m_ObjectHideFlags: 0
