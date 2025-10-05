@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f801b25684a4d4e8557ad4895d995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hareketHizi: 5
+  moveSpeed: 5
 --- !u!95 &1853912124
 Animator:
   serializedVersion: 7
@@ -1869,7 +1869,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2001692153}
   - component: {fileID: 2001692152}
-  - component: {fileID: 2001692154}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -1924,21 +1923,6 @@ Transform:
   - {fileID: 656086182}
   m_Father: {fileID: 1426089962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2001692154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001692151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ab7bcd22f1c924aa0b3a3e6ce7cfd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetRoot: {fileID: 0}
-  includeSelf: 1
-  includeInactive: 1
 --- !u!1 &2124177613
 GameObject:
   m_ObjectHideFlags: 0
