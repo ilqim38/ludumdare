@@ -101,14 +101,14 @@ public class InventoryManager : MonoBehaviour
             rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
             rt.pivot = new Vector2(0.5f, 0.5f);
             rt.anchoredPosition = Vector2.zero;
-            rt.localScale = new Vector3(75f, 75f, 1f);
+            rt.localScale = new Vector3(100f, 100f, 1f);
             var lp = rt.localPosition;
             rt.localPosition = new Vector3(lp.x, lp.y, 0f);
         }
         else
         {
             spawned.transform.position = slotTransform.position;
-            spawned.transform.localScale = new Vector3(75f, 75f, 1f);
+            spawned.transform.localScale = new Vector3(100f, 100f, 1f);
         }
 
         // 4️⃣ Slot script
