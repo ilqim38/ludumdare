@@ -2,27 +2,28 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-    // Elmanın kendi görseli
-    private Sprite kendiGorselim; 
+    private ItemBilgi _bilgi;
 
-    void Start()
+    private void Awake()
     {
-        // Elmanın görselini al ve değişkene kaydet.
-        kendiGorselim = GetComponent<SpriteRenderer>().sprite;
+        _bilgi = GetComponent<ItemBilgi>();
+        if (_bilgi == null)
+            Debug.LogError("[ItemPickUp] Üstünde ItemBilgi yok!", this);
     }
 
-    // Başka bir nesne bana dokunduğunda çalışır
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Eğer bana dokunan nesnenin etiketi "Player" ise...
-        if (other.CompareTag("Player"))
-        {
-            // 1. Yöneticiye haber ver ve Elma görselini gönder.
-            // AnaYonetici sayesinde InventoryManager'a ulaşıyoruz.
-            InventoryManager.AnaYonetici.EsyaEkle(kendiGorselim);
+        if (!other.CompareTag("Player")) return;
 
-            // 2. Elmayı sahneden sil (kaybolsun).
-            Destroy(gameObject); 
+        if (InventoryManager.AnaYonetici == null)
+        {
+            Debug.LogError("[ItemPickUp] InventoryManager.AnaYonetici yok!");
+            return;
         }
+
+        // Artık sprite değil, doğrudan ItemBilgi gönderiyoruz
+        InventoryManager.AnaYonetici.EsyaEkle(_bilgi);
+
+        Destroy(gameObject);
     }
 }

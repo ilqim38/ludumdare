@@ -6,4 +6,8 @@ public class ItemBilgi : MonoBehaviour
     public string ItemName;
     public Sprite ItemPhoto;
     public int ItemID;
+
+    private void Start() {
+        ItemPhoto = GetComponent<Sprite>();
+    }
 }
