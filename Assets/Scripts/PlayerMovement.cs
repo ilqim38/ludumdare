@@ -2,29 +2,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
-    public float hareketHizi = 5f; 
+    [SerializeField] private float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+    private Animator animator;
 
-        private Rigidbody2D rb;
-
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    // Fizik hesaplamaları burada yapılır.
-    void FixedUpdate()
+    private void Update()
     {
-        // 1. Kullanıcıdan Girdiyi Al
-        float yatayGirdi = Input.GetAxis("Horizontal"); // A/D (Sol/Sağ)
-        float dikeyGirdi = Input.GetAxis("Vertical");   // W/S (Yukarı/Aşağı)
+        // W-A-S-D tuşlarını oku
+        moveInput.x = Input.GetAxisRaw("Horizontal"); // A/D veya Sol/Sağ ok
+        moveInput.y = Input.GetAxisRaw("Vertical");   // W/S veya Yukarı/Aşağı ok
+        moveInput.Normalize(); // çapraz basınca fazla hız olmasın
 
-        // 2. Hareket Vektörünü Hesapla
-        Vector2 hareketVektoru = new Vector2(yatayGirdi, dikeyGirdi);
-        
-        // Çapraz hareket hızını sabit tutmak için normalleştirme 
-        hareketVektoru.Normalize();
+        // Rigidbody2D hareketi
+        rb.linearVelocity = moveInput * moveSpeed;
 
-        rb.linearVelocity = hareketVektoru * hareketHizi;
+        // Yürüme animasyonu aktif mi?
+        bool isWalking = moveInput != Vector2.zero;
+        animator.SetBool("isWalking", isWalking);
+
+        // Hareket varsa yönleri animatöre gönder
+        if (isWalking)
+        {
+            animator.SetFloat("LastInputX", moveInput.x);
+            animator.SetFloat("LastInputY", moveInput.y);
+        }
+
+        // Her frame yön değerlerini güncelle
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
     }
 }
