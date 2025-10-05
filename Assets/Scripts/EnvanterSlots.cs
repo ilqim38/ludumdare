@@ -4,59 +4,56 @@ using UnityEngine.EventSystems;
 [DisallowMultipleComponent]
 public class EnvanterSlots : MonoBehaviour, IDropHandler
 {
-    [Header("Bu slotun tuttuğu item (Inspector'dan atayabilirsin)")]
     public ItemBilgi currentItem;
-
     private RectTransform slotRT;
 
-    private void Awake()
-    {
-        slotRT = GetComponent<RectTransform>();
-    }
+    private void Awake() { slotRT = GetComponent<RectTransform>(); }
 
     private void Start()
     {
-        // 1) Eğer Inspector'dan currentItem atandıysa onu kullan
         if (currentItem == null && transform.childCount > 0)
-        {
-            // 2) Yoksa child varsa ondan doldur
             currentItem = transform.GetChild(0).GetComponent<ItemBilgi>();
-        }
 
-        // 3) Başlangıçta item varsa: parent = bu slot, pozisyon = slot merkezi
-        if (currentItem != null)
-        {
-            SnapIntoThisSlot(currentItem);
-        }
+        if (currentItem != null) SnapIntoThisSlot(currentItem);
     }
 
-    // Bu slota bırakıldığında
     public void OnDrop(PointerEventData eventData)
     {
         var go = eventData.pointerDrag;
-        if (go == null) return;
+        if (!go) return;
 
         var item = go.GetComponent<ItemBilgi>();
-        if (item == null) return;
+        if (!item) return;
 
         SnapIntoThisSlot(item);
         currentItem = item;
     }
 
-    // ---------- Yardımcı ----------
     private void SnapIntoThisSlot(ItemBilgi item)
     {
-        if (!item) return;
-
         var rtItem = item.GetComponent<RectTransform>();
 
-        // Bu slotun child'ı yap
+        // 1) child yap
         item.transform.SetParent(transform, worldPositionStays: false);
 
-        // UI ise anchoredPosition=0; değilse world position eşitle
-        if (rtItem != null)
+        if (rtItem != null) // UI
+        {
+            // 2) merkeze koy
             rtItem.anchoredPosition = Vector2.zero;
-        else
-            item.transform.position = transform.position;
+
+            // 3) Z'yi sabitle (UI'de genelde 0 tutulur)
+            var lp = rtItem.localPosition;
+            rtItem.localPosition = new Vector3(lp.x, lp.y, 0f);
+        }
+        else // 3D / world space
+        {
+            // Eski Z'yi koru (istersen slotZ kullan)
+            float keepZ = item.transform.position.z;               // koru
+            // float keepZ = transform.position.z;                 // slot'un Z'sine ata (tercih edersen)
+
+            item.transform.position = new Vector3(transform.position.x,
+                                                  transform.position.y,
+                                                  keepZ);
+        }
     }
 }
