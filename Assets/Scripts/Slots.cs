@@ -3,54 +3,59 @@ using UnityEngine.EventSystems;
 
 public class Slots : MonoBehaviour, IDropHandler, IPointerExitHandler
 {
-    public ItemBilgi currentItem; // slotun tuttuğu item
+    public ItemBilgi currentItem;
 
-    // --- ITEM SLOT'A BIRAKILDIĞINDA ---
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag == null) return;
+        if (!eventData.pointerDrag) return;
 
         var itemObj = eventData.pointerDrag;
-        var item = itemObj.GetComponent<ItemBilgi>();
-        if (item == null)
+        var item    = itemObj.GetComponent<ItemBilgi>();
+        if (!item)
         {
             Debug.LogWarning($"[{name}] Bırakılan objede ItemBilgi yok!");
             return;
         }
 
-        // Item slotun child'ı olsun
+        // child yap
         itemObj.transform.SetParent(transform, worldPositionStays: false);
 
-        // Pozisyonu slot merkezine hizala
         var draggedRT = itemObj.GetComponent<RectTransform>();
-        var myRT = GetComponent<RectTransform>();
-        if (draggedRT != null && myRT != null)
+        var myRT      = GetComponent<RectTransform>();
+
+        if (draggedRT != null && myRT != null) // UI
+        {
+            // merkeze hizala
             draggedRT.anchoredPosition = Vector2.zero;
-        else
-            itemObj.transform.position = transform.position;
 
-        // Slot artık bu item’i tutuyor
+            // Z'yi 0'a sabitle (UI)
+            var lp = draggedRT.localPosition;
+            draggedRT.localPosition = new Vector3(lp.x, lp.y, 0f);
+        }
+        else // 3D / world space
+        {
+            // Eski Z'yi koru (veya slot'un Z'si)
+            float keepZ = itemObj.transform.position.z;             // koru
+            // float keepZ = transform.position.z;                  // slot'un Z'si (istersen)
+
+            itemObj.transform.position = new Vector3(transform.position.x,
+                                                     transform.position.y,
+                                                     keepZ);
+        }
+
         currentItem = item;
-        Debug.Log($"[{name}] Slot doldu: {item.ItemName} (ID:{item.ItemID})");
-
-        // CraftingManager’a haber ver
-        if (CraftingManager.Instance != null)
-            CraftingManager.Instance.NotifySlotChanged();
+        CraftingManager.Instance?.NotifySlotChanged();
     }
 
-    // --- ITEM SLOTTAN ÇIKTIĞINDA ---
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (eventData.pointerDrag == null || currentItem == null) return;
+        if (!eventData.pointerDrag || currentItem == null) return;
 
         var draggedItem = eventData.pointerDrag.GetComponent<ItemBilgi>();
         if (draggedItem == currentItem)
         {
             currentItem = null;
-            Debug.Log($"[{name}] Slot boşaldı (item dışarı çıktı).");
-
-            if (CraftingManager.Instance != null)
-                CraftingManager.Instance.NotifySlotChanged();
+            CraftingManager.Instance?.NotifySlotChanged();
         }
     }
 }
