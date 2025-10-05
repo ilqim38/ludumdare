@@ -11,7 +11,12 @@ public class SceneInventoryRebuilder : MonoBehaviour
     [Header("Item prefabları (üstlerinde ItemBilgi olmalı)")]
     public List<GameObject> itemPrefabs = new();
 
-    [Header("UI item scale (şu an kullanılmıyor, hepsi 1 olacak)")]
+    [Header("Tek bir değerle ölçek (1 = orijinal boyut)")]
+    [Min(0f)]
+    public float uniformItemScale = 1f;
+
+    // İstersen ayrı ayrı da bıraktım; kullanılmıyor ama inspector’da dursun
+    [Tooltip("UI item scale (override edilmez, bilgi amaçlı)")]
     public Vector2 uiItemScale = new Vector2(1f, 1f);
 
     private Dictionary<int, GameObject> prefabById;
@@ -55,6 +60,9 @@ public class SceneInventoryRebuilder : MonoBehaviour
             return;
         }
 
+        // Güvenlik: negatif girilirse 0 kabul etme, en az 0.0001 verelim ki görünmez olmasın
+        float scale = Mathf.Max(0.0001f, uniformItemScale);
+
         int count = Mathf.Min(slotImages.Length, persist.slotIDs.Length);
 
         // Slotları temizle
@@ -87,15 +95,15 @@ public class SceneInventoryRebuilder : MonoBehaviour
 
             var spawned = Instantiate(prefab, slotT);
 
-            // 🔹 Ölçeği 1 yap (UI ve 3D fark etmeksizin)
-            spawned.transform.localScale = Vector3.one;
+            // 🔹 Ölçek ayarı — hem UI hem world için tek değer
+            spawned.transform.localScale = new Vector3(scale, scale, scale);
 
             // 🔹 UI pozisyon ayarı
             var rt = spawned.GetComponent<RectTransform>();
             if (rt != null)
             {
                 rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
-                rt.pivot = new Vector2(0.5f, 0.5f);
+                rt.pivot     = new Vector2(0.5f, 0.5f);
                 rt.anchoredPosition = Vector2.zero;
 
                 // Z'yi sıfırla
@@ -113,7 +121,7 @@ public class SceneInventoryRebuilder : MonoBehaviour
             var slotScript = slotT.GetComponent<EnvanterSlots>();
             if (slotScript != null)
             {
-                slotScript.currentItem = info;
+                slotScript.currentItem   = info;
                 slotScript.currentItemID = info != null ? info.ItemID : id;
             }
         }

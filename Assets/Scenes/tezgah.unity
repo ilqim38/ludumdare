@@ -2479,6 +2479,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &874544096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 874544098}
+  - component: {fileID: 874544097}
+  m_Layer: 0
+  m_Name: InventorySyncManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &874544097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874544096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2b0770e7fa04e45ae08a671c2d57c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotImages:
+  - {fileID: 2028281458}
+  - {fileID: 1582738409}
+  - {fileID: 1058716913}
+  - {fileID: 2055354073}
+  - {fileID: 1976204283}
+  - {fileID: 1506217305}
+--- !u!4 &874544098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874544096}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 596.03784, y: 104.57888, z: -0.72754866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &888287196 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3885907607817390869, guid: c5ef4fa7cf6940049b2ac8e521b52469, type: 3}
@@ -3204,6 +3255,7 @@ MonoBehaviour:
   - {fileID: 4183056523570567929, guid: 1b757628614dba34287c34cd815f5db8, type: 3}
   - {fileID: 6423894191253260345, guid: 269700de92f530d4082aa3d99775c379, type: 3}
   - {fileID: 6744265068220167166, guid: cdbfae73ecf8b8046aca29dfa7312486, type: 3}
+  uniformItemScale: 1
   uiItemScale: {x: 75, y: 75}
 --- !u!4 &1157354339
 Transform:
@@ -4943,7 +4995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1937371345
 Transform:
   m_ObjectHideFlags: 0
@@ -5947,3 +5999,4 @@ SceneRoots:
   - {fileID: 1402924959}
   - {fileID: 800515763}
   - {fileID: 1157354339}
+  - {fileID: 874544098}

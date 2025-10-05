@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DisallowMultipleComponent]
 public class InventoryManager : MonoBehaviour
 {
     [Header("Envanter Slotları (UI Image / RectTransform)")]
@@ -10,9 +11,7 @@ public class InventoryManager : MonoBehaviour
     [Header("Item Prefabları (üstünde ItemBilgi olmalı)")]
     public List<GameObject> itemPrefabs = new List<GameObject>();
 
-    // Her slotun tuttuğu ItemID (-1 = boş) -> iç yönetim
     private int[] slotItemIDs;
-
     public static InventoryManager AnaYonetici;
 
     private void Awake()
@@ -23,11 +22,35 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError("[InventoryManager] slotKutulari boş!", this);
 
         slotItemIDs = new int[slotKutulari.Length];
-        for (int i = 0; i < slotItemIDs.Length; i++) slotItemIDs[i] = -1;
+        for (int i = 0; i < slotItemIDs.Length; i++) slotItemIDs[i] = 0;
 
-        // Persist tarafının slot sayısını eşitle (opsiyonel ama iyi)
         if (InventoryPersist.Instance != null)
             InventoryPersist.Instance.ResizeIfNeeded(slotKutulari.Length);
+    }
+
+    private void Update()
+    {
+        // Her frame slotları kontrol et → Persist'e yansıt
+        if (InventoryPersist.Instance == null) return;
+
+        for (int i = 0; i < slotKutulari.Length; i++)
+        {
+            var slotT = slotKutulari[i].transform;
+
+            if (slotT.childCount > 0)
+            {
+                var child = slotT.GetChild(0).GetComponent<ItemBilgi>();
+                int id = (child != null) ? child.ItemID : 0;
+
+                slotItemIDs[i] = id;
+                InventoryPersist.Instance.SetSlot(i, id);
+            }
+            else
+            {
+                slotItemIDs[i] = 0;
+                InventoryPersist.Instance.SetSlot(i, 0);
+            }
+        }
     }
 
     public void EsyaEkle(ItemBilgi picked)
@@ -38,11 +61,11 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        // 1) İlk boş slot (ID -1 olan)
+        // 1️⃣ İlk boş slot (ID 0 olan)
         int targetIndex = -1;
         for (int i = 0; i < slotItemIDs.Length; i++)
         {
-            if (slotItemIDs[i] == -1)
+            if (slotItemIDs[i] == 0)
             {
                 targetIndex = i;
                 break;
@@ -55,7 +78,7 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        // 2) Prefab bul
+        // 2️⃣ Prefab bul
         GameObject prefab = itemPrefabs.Find(p =>
         {
             var ib = p ? p.GetComponent<ItemBilgi>() : null;
@@ -68,7 +91,7 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        // 3) Instantiate → parent → merkez
+        // 3️⃣ Instantiate → parent → merkez
         var slotTransform = slotKutulari[targetIndex].transform;
         GameObject spawned = Instantiate(prefab, slotTransform);
 
@@ -88,23 +111,23 @@ public class InventoryManager : MonoBehaviour
             spawned.transform.localScale = new Vector3(75f, 75f, 1f);
         }
 
-        // 4) Slot script
-        var slotScript  = slotTransform.GetComponent<EnvanterSlots>();
+        // 4️⃣ Slot script
+        var slotScript = slotTransform.GetComponent<EnvanterSlots>();
         var spawnedInfo = spawned.GetComponent<ItemBilgi>();
         if (slotScript != null)
         {
-            slotScript.currentItem   = spawnedInfo;
+            slotScript.currentItem = spawnedInfo;
             slotScript.currentItemID = spawnedInfo != null ? spawnedInfo.ItemID : picked.ItemID;
         }
 
-        // 5) Local ve Persist’e yaz
+        // 5️⃣ Local ve Persist’e yaz
         slotItemIDs[targetIndex] = picked.ItemID;
-        InventoryPersist.Instance?.SetSlot(targetIndex, picked.ItemID); // 🔸 YENİ
+        InventoryPersist.Instance?.SetSlot(targetIndex, picked.ItemID);
 
-        // (Opsiyonel) görünürlük
+        // (Opsiyonel) Görünürlük
         slotKutulari[targetIndex].enabled = true;
 
-        Debug.Log($"[InventoryManager] Eklendi: {(spawnedInfo ? spawnedInfo.ItemName : $"ID:{picked.ItemID}")} → Slot {targetIndex}");
+        Debug.Log($"[InventoryManager] Eklendi: {picked.ItemName} → Slot {targetIndex}");
     }
 
     public void ClearSlot(int index)
@@ -121,7 +144,7 @@ public class InventoryManager : MonoBehaviour
             slotScript.ClearSlot();
         }
 
-        slotItemIDs[index] = -1;
-        InventoryPersist.Instance?.ClearSlot(index); // 🔸 YENİ
+        slotItemIDs[index] = 0;
+        InventoryPersist.Instance?.ClearSlot(index);
     }
 }
