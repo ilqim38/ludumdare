@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4858674746016462035}
   - component: {fileID: 8499517720260693590}
+  - component: {fileID: 1950777713927436380}
   - component: {fileID: 2798036726686562801}
   - component: {fileID: 4500840145351159607}
   m_Layer: 5
@@ -46,6 +47,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6744265068220167166}
   m_CullTransparentMesh: 1
+--- !u!114 &1950777713927436380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744265068220167166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88993e1ba49217b4cbbfc8dc7bf79677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sesClip: {fileID: 8300000, guid: 197fbaec1e4be7543bb987509591a633, type: 3}
+  fadeImage: {fileID: 0}
+  fadeSuresi: 2
+  hedefSahneAdi: Cutscene2
+  hedefSahneIndex: 4
 --- !u!114 &2798036726686562801
 MonoBehaviour:
   m_ObjectHideFlags: 0
