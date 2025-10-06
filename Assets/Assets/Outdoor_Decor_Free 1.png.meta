@@ -1,0 +1,1147 @@
+fileFormatVersion: 2
+guid: e95a470638f1a674b94438cb1a393580
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8271194523289727908
+    second: Outdoor_Decor_Free 1_0
+  - first:
+      213: -3834794048128766928
+    second: Outdoor_Decor_Free 1_1
+  - first:
+      213: -3155217532020947694
+    second: Outdoor_Decor_Free 1_2
+  - first:
+      213: 4561913189201070567
+    second: Outdoor_Decor_Free 1_3
+  - first:
+      213: -2826784704092509480
+    second: Outdoor_Decor_Free 1_4
+  - first:
+      213: 3495429415044838098
+    second: Outdoor_Decor_Free 1_5
+  - first:
+      213: 2395946760673714339
+    second: Outdoor_Decor_Free 1_6
+  - first:
+      213: -1561625570206789878
+    second: Outdoor_Decor_Free 1_7
+  - first:
+      213: 4969357380978962171
+    second: Outdoor_Decor_Free 1_8
+  - first:
+      213: -6719934189021513588
+    second: Outdoor_Decor_Free 1_9
+  - first:
+      213: 3510837221820898271
+    second: Outdoor_Decor_Free 1_10
+  - first:
+      213: -6615006739773881343
+    second: Outdoor_Decor_Free 1_11
+  - first:
+      213: 5317092409596355217
+    second: Outdoor_Decor_Free 1_12
+  - first:
+      213: 4015830635054842822
+    second: Outdoor_Decor_Free 1_13
+  - first:
+      213: -8603053112394225490
+    second: Outdoor_Decor_Free 1_14
+  - first:
+      213: 2102810121680170027
+    second: Outdoor_Decor_Free 1_15
+  - first:
+      213: 2159572866275086073
+    second: Outdoor_Decor_Free 1_16
+  - first:
+      213: 1929191695086328641
+    second: Outdoor_Decor_Free 1_17
+  - first:
+      213: -2539928823083439601
+    second: Outdoor_Decor_Free 1_18
+  - first:
+      213: 7892554212291472210
+    second: Outdoor_Decor_Free 1_19
+  - first:
+      213: 796421516072400456
+    second: Outdoor_Decor_Free 1_20
+  - first:
+      213: 2878034227288315277
+    second: Outdoor_Decor_Free 1_21
+  - first:
+      213: -6008442668973237109
+    second: Outdoor_Decor_Free 1_22
+  - first:
+      213: -4877167560776887345
+    second: Outdoor_Decor_Free 1_23
+  - first:
+      213: -8129742801734690719
+    second: Outdoor_Decor_Free 1_24
+  - first:
+      213: 5568045371018885111
+    second: Outdoor_Decor_Free 1_25
+  - first:
+      213: 2354030215866425527
+    second: Outdoor_Decor_Free 1_26
+  - first:
+      213: -140500470695653148
+    second: Outdoor_Decor_Free 1_27
+  - first:
+      213: -3263785064803182369
+    second: Outdoor_Decor_Free 1_28
+  - first:
+      213: 1056586587645526150
+    second: Outdoor_Decor_Free 1_29
+  - first:
+      213: -2394061132957304422
+    second: Outdoor_Decor_Free 1_30
+  - first:
+      213: -4688364255505536872
+    second: Outdoor_Decor_Free 1_31
+  - first:
+      213: 5495739384865979016
+    second: Outdoor_Decor_Free 1_32
+  - first:
+      213: 2405839051738952086
+    second: Outdoor_Decor_Free 1_33
+  - first:
+      213: -6606756495787163326
+    second: Outdoor_Decor_Free 1_34
+  - first:
+      213: -5297374826607216427
+    second: Outdoor_Decor_Free 1_35
+  - first:
+      213: -2009925320916676211
+    second: Outdoor_Decor_Free 1_36
+  - first:
+      213: 443983130383515400
+    second: Outdoor_Decor_Free 1_37
+  - first:
+      213: 791580360363192384
+    second: Outdoor_Decor_Free 1_38
+  - first:
+      213: -4590509047076303420
+    second: Outdoor_Decor_Free 1_39
+  - first:
+      213: -4942943873006139082
+    second: Outdoor_Decor_Free 1_40
+  - first:
+      213: -1825218545409634810
+    second: Outdoor_Decor_Free 1_41
+  - first:
+      213: 7475531623690207248
+    second: Outdoor_Decor_Free 1_42
+  - first:
+      213: 6581518579717402767
+    second: Outdoor_Decor_Free 1_43
+  - first:
+      213: -4163804981985129838
+    second: Outdoor_Decor_Free 1_44
+  - first:
+      213: -5158179721099976051
+    second: Outdoor_Decor_Free 1_45
+  - first:
+      213: 7826631850056368331
+    second: Outdoor_Decor_Free 1_46
+  - first:
+      213: -7470831375254323066
+    second: Outdoor_Decor_Free 1_47
+  - first:
+      213: 8190090116060260784
+    second: Outdoor_Decor_Free 1_48
+  - first:
+      213: -8270865793066444218
+    second: Outdoor_Decor_Free 1_49
+  - first:
+      213: -6302118478562886714
+    second: Outdoor_Decor_Free 1_50
+  - first:
+      213: -6424037190874040651
+    second: Outdoor_Decor_Free 1_51
+  - first:
+      213: 6251562362615125260
+    second: Outdoor_Decor_Free 1_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 181
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cc82b5760d63d80800000000000000
+      internalID: -8271194523289727908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 181
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ca08e712318cac0800000000000000
+      internalID: -3834794048128766928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 179
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2158ec62f5a6634d0800000000000000
+      internalID: -3155217532020947694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_4
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 175
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daee00e94e35c8d0800000000000000
+      internalID: -2826784704092509480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 175
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a064b272ec104120800000000000000
+      internalID: 2395946760673714339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe673f8534b6f440800000000000000
+      internalID: 4969357380978962171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 163
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb9ade1adff8b030800000000000000
+      internalID: 3510837221820898271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 163
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10486f00b66c234a0800000000000000
+      internalID: -6615006739773881343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 164
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192aae7106b1ac940800000000000000
+      internalID: 5317092409596355217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c343909fa81bb730800000000000000
+      internalID: 4015830635054842822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 163
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea86ce376c0db9880800000000000000
+      internalID: -8603053112394225490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 161
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ca7dc1aaeae2d10800000000000000
+      internalID: 2102810121680170027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe06e8741858fd10800000000000000
+      internalID: 2159572866275086073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_17
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 147
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b114910add5ca10800000000000000
+      internalID: 1929191695086328641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 145
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ae559413c50ccd0800000000000000
+      internalID: -2539928823083439601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_19
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 148
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b65225d3cf78d60800000000000000
+      internalID: 7892554212291472210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_20
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 147
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84639f436257d0b00800000000000000
+      internalID: 796421516072400456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 145
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d859fe891e4d0f720800000000000000
+      internalID: 2878034227288315277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_22
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 145
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cdc860a39bd9ca0800000000000000
+      internalID: -6008442668973237109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 79
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81d2b5d19f4b14e0800000000000000
+      internalID: -2009925320916676211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_37
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 65
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f76c40e48592600800000000000000
+      internalID: 443983130383515400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_38
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 66
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040bf9ec4224cfa00800000000000000
+      internalID: 791580360363192384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_39
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 49
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdccced75c3b40c0800000000000000
+      internalID: -4590509047076303420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_40
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 49
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63986c08cb2276bb0800000000000000
+      internalID: -4942943873006139082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_41
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 48
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e476347658ba6e0800000000000000
+      internalID: -1825218545409634810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_42
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 48
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0100149976c6eb760800000000000000
+      internalID: 7475531623690207248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_43
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 33
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8070b22740465b50800000000000000
+      internalID: 6581518579717402767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_44
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 33
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a46cefd613736c0800000000000000
+      internalID: -4163804981985129838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_45
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8266347fd67a68b0800000000000000
+      internalID: -5158179721099976051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_46
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 32
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc04e5a4338cd9c60800000000000000
+      internalID: 7826631850056368331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_47
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6808f154276425890800000000000000
+      internalID: -7470831375254323066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_48
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 32
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9a53e419b09a170800000000000000
+      internalID: 8190090116060260784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_49
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 17
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a5853d16bf73d80800000000000000
+      internalID: -8270865793066444218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_50
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 17
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb75d042a06a88a0800000000000000
+      internalID: -6302118478562886714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_51
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6fd0ef53c39d6a0800000000000000
+      internalID: -6424037190874040651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor_Decor_Free 1_52
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0550eab8d202c650800000000000000
+      internalID: 6251562362615125260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e3d2d9f80095228418a90544b3781acd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Outdoor_Decor_Free 1_0: -8271194523289727908
+      Outdoor_Decor_Free 1_1: -3834794048128766928
+      Outdoor_Decor_Free 1_10: 3510837221820898271
+      Outdoor_Decor_Free 1_11: -6615006739773881343
+      Outdoor_Decor_Free 1_12: 5317092409596355217
+      Outdoor_Decor_Free 1_13: 4015830635054842822
+      Outdoor_Decor_Free 1_14: -8603053112394225490
+      Outdoor_Decor_Free 1_15: 2102810121680170027
+      Outdoor_Decor_Free 1_16: 2159572866275086073
+      Outdoor_Decor_Free 1_17: 1929191695086328641
+      Outdoor_Decor_Free 1_18: -2539928823083439601
+      Outdoor_Decor_Free 1_19: 7892554212291472210
+      Outdoor_Decor_Free 1_2: -3155217532020947694
+      Outdoor_Decor_Free 1_20: 796421516072400456
+      Outdoor_Decor_Free 1_21: 2878034227288315277
+      Outdoor_Decor_Free 1_22: -6008442668973237109
+      Outdoor_Decor_Free 1_23: -4877167560776887345
+      Outdoor_Decor_Free 1_24: -8129742801734690719
+      Outdoor_Decor_Free 1_25: 5568045371018885111
+      Outdoor_Decor_Free 1_26: 2354030215866425527
+      Outdoor_Decor_Free 1_27: -140500470695653148
+      Outdoor_Decor_Free 1_28: -3263785064803182369
+      Outdoor_Decor_Free 1_29: 1056586587645526150
+      Outdoor_Decor_Free 1_3: 4561913189201070567
+      Outdoor_Decor_Free 1_30: -2394061132957304422
+      Outdoor_Decor_Free 1_31: -4688364255505536872
+      Outdoor_Decor_Free 1_32: 5495739384865979016
+      Outdoor_Decor_Free 1_33: 2405839051738952086
+      Outdoor_Decor_Free 1_34: -6606756495787163326
+      Outdoor_Decor_Free 1_35: -5297374826607216427
+      Outdoor_Decor_Free 1_36: -2009925320916676211
+      Outdoor_Decor_Free 1_37: 443983130383515400
+      Outdoor_Decor_Free 1_38: 791580360363192384
+      Outdoor_Decor_Free 1_39: -4590509047076303420
+      Outdoor_Decor_Free 1_4: -2826784704092509480
+      Outdoor_Decor_Free 1_40: -4942943873006139082
+      Outdoor_Decor_Free 1_41: -1825218545409634810
+      Outdoor_Decor_Free 1_42: 7475531623690207248
+      Outdoor_Decor_Free 1_43: 6581518579717402767
+      Outdoor_Decor_Free 1_44: -4163804981985129838
+      Outdoor_Decor_Free 1_45: -5158179721099976051
+      Outdoor_Decor_Free 1_46: 7826631850056368331
+      Outdoor_Decor_Free 1_47: -7470831375254323066
+      Outdoor_Decor_Free 1_48: 8190090116060260784
+      Outdoor_Decor_Free 1_49: -8270865793066444218
+      Outdoor_Decor_Free 1_5: 3495429415044838098
+      Outdoor_Decor_Free 1_50: -6302118478562886714
+      Outdoor_Decor_Free 1_51: -6424037190874040651
+      Outdoor_Decor_Free 1_52: 6251562362615125260
+      Outdoor_Decor_Free 1_6: 2395946760673714339
+      Outdoor_Decor_Free 1_7: -1561625570206789878
+      Outdoor_Decor_Free 1_8: 4969357380978962171
+      Outdoor_Decor_Free 1_9: -6719934189021513588
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -51,7 +51,7 @@ public class SceneInventoryRebuilder : MonoBehaviour
         var persist = InventoryPersist.Instance;
         if (persist == null)
         {
-            Debug.LogError("[SceneInventoryRebuilder] InventoryPersist bulunamadı!");
+            //Debug.LogError("[SceneInventoryRebuilder] InventoryPersist bulunamadı!");
             return;
         }
         if (slotImages == null || slotImages.Length == 0)

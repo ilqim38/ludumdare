@@ -34,7 +34,7 @@ public class MamudoSon : MonoBehaviour
 
                 // Başlangıç alfa = 0, rengi fadeRenk olsun
                 fadeImage.color = new Color(fadeRenk.r, fadeRenk.g, fadeRenk.b, 0f);
-                fadeImage.raycastTarget = false; // butonlar tıklanabilir
+                fadeImage.raycastTarget = true; // butonlar tıklanabilir
                 Debug.Log("FadeImage bulundu ve hazırlandı!");
             }
             else
@@ -85,7 +85,7 @@ public class MamudoSon : MonoBehaviour
                 fadeImage.color = yeniRenk;
 
                 // Yavaş yavaş kararıyor ama tıklama %90'dan sonra engelleniyor
-                fadeImage.raycastTarget = normalizeZaman >= 0.9f;
+                // fadeImage.raycastTarget = normalizeZaman >= 0.9f;
 
                 yield return null;
             }
