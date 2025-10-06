@@ -5,11 +5,14 @@ public class ClickToPlayAndDisableWallsUI : MonoBehaviour, IPointerClickHandler
 {
     [Header("Ses Ayarı")]
     [SerializeField] private AudioClip sesClip;      // Inspector’dan ata
-    [SerializeField, Range(0f,1f)] private float volume = 1f;
+    [SerializeField, Range(0f, 1f)] private float volume = 1f;
 
     [Header("Hedefler")]
     [SerializeField] private string duvarTag = "duvar";   // Tag adı
     [SerializeField] private bool includeChildren = true; // Çocuk colliderları da kapat
+
+    [Header("Oyuncu Ayarı")]
+    [SerializeField, Range(0f, 1f)] private float playerAlpha = 0.5f; // Görünürlük oranı
 
     // UI Image tıklaması burada gelir
     public void OnPointerClick(PointerEventData eventData)
@@ -18,13 +21,13 @@ public class ClickToPlayAndDisableWallsUI : MonoBehaviour, IPointerClickHandler
         if (sesClip != null)
         {
             var host = new GameObject("OneShotAudioHost_UI");
-            var src  = host.AddComponent<AudioSource>();
+            var src = host.AddComponent<AudioSource>();
             src.clip = sesClip;
             src.volume = Mathf.Clamp01(volume);
             src.playOnAwake = false;
             src.loop = false;
-            src.spatialBlend = 0f;         // 2D ses (UI için ideal)
-            DontDestroyOnLoad(host);       // Sahne değişse de klip bitsin
+            src.spatialBlend = 0f;          // 2D ses (UI için ideal)
+            DontDestroyOnLoad(host);        // Sahne değişse de klip bitsin
             src.Play();
             Destroy(host, sesClip.length + 0.1f); // Klip bitince host’u temizle
         }
@@ -80,7 +83,29 @@ public class ClickToPlayAndDisableWallsUI : MonoBehaviour, IPointerClickHandler
 
         Debug.Log($"[ClickToPlayAndDisableWallsUI] '{duvarTag}' tag'li objelerde {kapatilan} collider kapatıldı.");
 
-        // 3) Tıklanan UI objesini yok et (ses ayrı host’ta çalmaya devam eder)
+        // 3) Player'ı bul ve saydamlaştır
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            var sr = player.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                Color renk = sr.color;
+                renk.a = Mathf.Clamp01(playerAlpha);
+                sr.color = renk;
+                Debug.Log($"[ClickToPlayAndDisableWallsUI] Player görünürlüğü %{playerAlpha * 100} yapıldı.");
+            }
+            else
+            {
+                Debug.LogWarning("[ClickToPlayAndDisableWallsUI] Player'da SpriteRenderer bulunamadı!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[ClickToPlayAndDisableWallsUI] Player tag'li nesne bulunamadı!");
+        }
+
+        // 4) Tıklanan UI objesini yok et (ses ayrı host’ta çalmaya devam eder)
         Destroy(gameObject);
     }
 }

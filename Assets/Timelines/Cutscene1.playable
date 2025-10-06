@@ -31,7 +31,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0.5846666666666636
+    m_BlendOutDuration: 0.9179999999999993
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -73,15 +73,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: kaynama1
   - m_Version: 1
-    m_Start: 24.783333333333335
-    m_ClipIn: 17.301333333333332
+    m_Start: 24.45
+    m_ClipIn: 16.383333333333333
     m_Asset: {fileID: 2835388943234371719}
-    m_Duration: 8.066666666666666
+    m_Duration: 10.217999999999666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8739367028574419582}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.5846666666666636
+    m_BlendInDuration: 0.9179999999999993
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
