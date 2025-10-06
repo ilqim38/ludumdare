@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dc03ed3b2ef107e4089580462910ff30
+guid: 3a2b4cb282d7f6f4986e56779a0827d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4896302714577012209
-    second: kilise_0
+      213: 964787014125869130
+    second: Mamudo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,8 +49,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.4985192, y: 0.21401353}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kilise_0
+      name: Mamudo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 490
-        height: 495
+        width: 126
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0a3bd07f96dc0cb0800000000000000
-      internalID: -4896302714577012209
+      spriteID: a48d1ec7dac936d00800000000000000
+      internalID: 964787014125869130
       vertices: []
       indices: 
       edges: []
@@ -152,7 +152,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kilise_0: -4896302714577012209
+      Mamudo_0: 964787014125869130
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
